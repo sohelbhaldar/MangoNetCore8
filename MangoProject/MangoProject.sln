@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mango.Service.CouponAPI", "Mango.Service.CouponAPI\Mango.Service.CouponAPI.csproj", "{B2D5DBB4-2D37-4E75-871F-E4AE42B5A96F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2D5DBB4-2D37-4E75-871F-E4AE42B5A96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D5DBB4-2D37-4E75-871F-E4AE42B5A96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D5DBB4-2D37-4E75-871F-E4AE42B5A96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D5DBB4-2D37-4E75-871F-E4AE42B5A96F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83AE421E-5957-473D-8C63-34C5E3A2D17B}
+	EndGlobalSection
+EndGlobal
