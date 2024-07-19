@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Mango.Service.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     [ApiController]
     public class CouponAPIController : ControllerBase
     {
@@ -36,7 +36,7 @@ namespace Mango.Service.CouponAPI.Controllers
                 {
                     _responseDTO.IsSuccess = false;
                     _responseDTO.Message = "No Coupon Found";
-                    return Ok(_responseDTO);
+                    return NotFound(_responseDTO);
                 }
             }
             catch (Exception ex)
@@ -49,11 +49,11 @@ namespace Mango.Service.CouponAPI.Controllers
 
         [HttpGet]
         [Route("{id:int}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(int couponId)
         {
             try
             {
-                var coupons = _dbContext.Coupons.FirstOrDefault(x => x.CouponId == id);
+                var coupons = _dbContext.Coupons.FirstOrDefault(x => x.CouponId == couponId);
                 if(coupons != null)
                 {
                     var result = _mapper.Map<CouponDTO>(coupons);
@@ -64,7 +64,7 @@ namespace Mango.Service.CouponAPI.Controllers
                 {
                     _responseDTO.IsSuccess = false;
                     _responseDTO.Message = "No Coupon Found";
-                    return Ok(_responseDTO);
+                    return NotFound(_responseDTO);
                 }
             }
             catch(Exception ex)
@@ -92,7 +92,7 @@ namespace Mango.Service.CouponAPI.Controllers
                 {
                     _responseDTO.IsSuccess = false;
                     _responseDTO.Message = "No Coupon Found";
-                    return Ok(_responseDTO);
+                    return NotFound(_responseDTO);
                 }
             }
             catch (Exception ex)
@@ -121,7 +121,7 @@ namespace Mango.Service.CouponAPI.Controllers
                 {
                     _responseDTO.IsSuccess = false;
                     _responseDTO.Message = "No Coupon Found";
-                    return Ok(_responseDTO);
+                    return NotFound(_responseDTO);
                 }
             }
             catch (Exception ex)
@@ -153,7 +153,7 @@ namespace Mango.Service.CouponAPI.Controllers
                     {
                         _responseDTO.IsSuccess = false;
                         _responseDTO.Message = "No Coupon Found";
-                        return Ok(_responseDTO);
+                        return NotFound(_responseDTO);
                     }
                     _dbContext.SaveChanges();
                     _responseDTO.Response = coupon;
@@ -178,5 +178,48 @@ namespace Mango.Service.CouponAPI.Controllers
                 return BadRequest(_responseDTO);
             }
         }
+
+        [HttpDelete]
+        public IActionResult Delete(int couponId)
+        {
+            try
+            {
+                if (couponId > 0)
+                {
+                    var couponToDelete = _dbContext.Coupons.FirstOrDefault(x => x.CouponId == couponId);
+                    if (couponToDelete != null)
+                    {
+                        _dbContext.Coupons.Remove(couponToDelete);
+                    }
+                    else
+                    {
+                        _responseDTO.IsSuccess = false;
+                        _responseDTO.Message = "No Coupon Found";
+                        return NotFound(_responseDTO);
+                    }
+                    _dbContext.SaveChanges();
+                    _responseDTO.Response = couponToDelete;
+                    _responseDTO.Message = "Coupon Deleted Successfully";
+                    return Ok(_responseDTO);
+                }
+                else
+                {
+                    _responseDTO.IsSuccess = false;
+                    _responseDTO.Message = "No Coupon Found";
+                    return Ok(_responseDTO);
+                }
+            }
+            catch (Exception ex)
+            {
+                _responseDTO.IsSuccess = false;
+                _responseDTO.Message = ex.Message;
+                if (ex.InnerException != null)
+                {
+                    _responseDTO.Message = ex.Message + ' ' + ex.InnerException.Message;
+                }
+                return BadRequest(_responseDTO);
+            }
+        }
+
     }
 }

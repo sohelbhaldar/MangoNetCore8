@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Sohel\\GitProjects\\MangoNetCore8Project\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj": {}
+    "C:\\Users\\z004nhpp\\OneDrive - Siemens AG\\Sohel\\My\\A_NETCOREPROJECT\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj": {}
   },
   "projects": {
-    "C:\\Sohel\\GitProjects\\MangoNetCore8Project\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj": {
+    "C:\\Users\\z004nhpp\\OneDrive - Siemens AG\\Sohel\\My\\A_NETCOREPROJECT\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Sohel\\GitProjects\\MangoNetCore8Project\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj",
+        "projectUniqueName": "C:\\Users\\z004nhpp\\OneDrive - Siemens AG\\Sohel\\My\\A_NETCOREPROJECT\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj",
         "projectName": "Mango.Service.CouponAPI",
-        "projectPath": "C:\\Sohel\\GitProjects\\MangoNetCore8Project\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj",
-        "packagesPath": "C:\\Users\\Sohel\\.nuget\\packages\\",
-        "outputPath": "C:\\Sohel\\GitProjects\\MangoNetCore8Project\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\obj\\",
+        "projectPath": "C:\\Users\\z004nhpp\\OneDrive - Siemens AG\\Sohel\\My\\A_NETCOREPROJECT\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\Mango.Service.CouponAPI.csproj",
+        "packagesPath": "C:\\Users\\z004nhpp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z004nhpp\\OneDrive - Siemens AG\\Sohel\\My\\A_NETCOREPROJECT\\MangoNetCore8\\MangoProject\\Mango.Service.CouponAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sohel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\z004nhpp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +25,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dsi.myget.org/F/dev/auth/2043ec06-a46b-42a9-a172-7ee9e9573bbf/api/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -39,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -95,7 +99,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
