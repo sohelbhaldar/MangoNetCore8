@@ -31,7 +31,6 @@ C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Servi
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\obj\Debug\net8.0\Mango.Service.CouponAPI.genruntimeconfig.cache
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\obj\Debug\net8.0\ref\Mango.Service.CouponAPI.dll
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\bin\Debug\net8.0\AutoMapper.dll
-C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\bin\Debug\net8.0\Azure.Core.dll
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\bin\Debug\net8.0\Azure.Identity.dll
 C:\Sohel\GitProjects\MangoNetCore8Project\MangoNetCore8\MangoProject\Mango.Service.CouponAPI\bin\Debug\net8.0\Humanizer.dll
