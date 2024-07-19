@@ -48,7 +48,7 @@ namespace Mango.Service.CouponAPI.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}")]
+        [Route("{couponId:int}")]
         public IActionResult Get(int couponId)
         {
             try
@@ -58,7 +58,7 @@ namespace Mango.Service.CouponAPI.Controllers
                 {
                     var result = _mapper.Map<CouponDTO>(coupons);
                     _responseDTO.Response = result;
-                    return Ok(result);
+                    return Ok(_responseDTO);
                 }
                 else
                 {
@@ -180,6 +180,7 @@ namespace Mango.Service.CouponAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{couponId:int}")]
         public IActionResult Delete(int couponId)
         {
             try

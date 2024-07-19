@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\z004nhpp\OneDrive - Siemens AG\Sohel\My\A_NETCOREPROJECT\MangoNetCore8\MangoProject\Mango.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Coupon/CouponCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cG9uXENvdXBvbkNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Coupon/CouponDelete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cG9uXENvdXBvbkRlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Coupon/CouponIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cG9uXENvdXBvbkluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Shared/_Notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/z004nhpp/OneDrive - Siemens AG/Sohel/My/A_NETCOREPROJECT/MangoNetCore8/MangoProject/Mango.Web/Views/Shared/_ValidationScriptsPartial.cshtml]

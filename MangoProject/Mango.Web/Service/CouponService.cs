@@ -42,11 +42,12 @@ namespace Mango.Web.Service
 
         public async Task<ResponseDTO?> GetCouponById(int couponId)
         {
-            return await _baseService.SendAsync(new RequestDTO()
+            var result = await _baseService.SendAsync(new RequestDTO()
             {
                 ApiType = SD.ApiType.GET,
                 Url = SD.CouponAPIBase + "/api/coupon/" + couponId
             });
+            return result;
         }
 
         public async Task<ResponseDTO?> GetCoupons()
