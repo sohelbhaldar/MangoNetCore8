@@ -1,6 +1,0 @@
-@MangoProject_HostAddress = http://localhost:5046
-
-GET {{MangoProject_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
