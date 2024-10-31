@@ -22,11 +22,11 @@ namespace Mango.Web.Service
             #region Message
             //Create the rquired HttpMessage
             HttpRequestMessage message = new();
-            //Add Headers
+            //Add Headers //how TO?
             message.Headers.Add("Accept", "application/json");
-            //Request URI
+            //Request URI // Where to?
             message.RequestUri = new Uri(requestDTO.Url);
-            //Content -- if POST PUT DELETE then -- Serialize
+            //Content -- if POST PUT DELETE then -- Serialize //What to?
             if (requestDTO.Data != null)
             {
                 message.Content = new StringContent(JsonConvert.SerializeObject(requestDTO.Data), Encoding.UTF8, "application/json");
