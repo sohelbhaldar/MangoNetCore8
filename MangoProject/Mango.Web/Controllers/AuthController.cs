@@ -1,24 +1,56 @@
 ﻿using Mango.Web.Models;
 using Mango.Web.Service.IService;
 using Mango.Web.Utility;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace Mango.Web.Controllers
 {
     public class AuthController : Controller
     {
         private readonly IAuthService _authService;
+        private readonly ITokenProvider _tokenProvider;
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService, ITokenProvider tokenProvider)
         {
             _authService = authService;
+            _tokenProvider = tokenProvider;
+
         }
+        [HttpGet]
         public IActionResult Login()
         {
             LoginRequestDTO loginRequestDTO = new();
             return View(loginRequestDTO);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginRequestDTO loginRequestDTO)
+        {
+            var loginResponse = await _authService.LoginAsync(loginRequestDTO);
+            if (loginResponse != null && loginResponse.IsSuccess)
+            {
+                var result = JsonConvert.DeserializeObject<LoginResponseDTO>(Convert.ToString(loginResponse.Response));
+
+                await SignInUser(result);
+                _tokenProvider.SetToken(result?.Token);
+
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                ModelState.AddModelError("Custom", loginResponse.Message);
+                return View(loginRequestDTO);
+            }
+        }
+
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -61,6 +93,24 @@ namespace Mango.Web.Controllers
         public IActionResult Logout()
         {
             return View();
+        }
+
+        private async Task SignInUser(LoginResponseDTO loginResponseDTO)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            var token = tokenHandler.ReadJwtToken(loginResponseDTO.Token);
+
+            var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Email, token?.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Sub, token?.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Sub).Value));
+            identity.AddClaim(new Claim(JwtRegisteredClaimNames.Name, token?.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Name).Value));
+
+            identity.AddClaim(new Claim(ClaimTypes.Name, token?.Claims.FirstOrDefault(u => u.Type == JwtRegisteredClaimNames.Email).Value));
+
+            var claimPrincipal = new ClaimsPrincipal(identity);
+            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimPrincipal);
         }
     }
 }
